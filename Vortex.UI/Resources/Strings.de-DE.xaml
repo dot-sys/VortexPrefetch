@@ -1,0 +1,202 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Main Window -->
+    <system:String x:Key="Language">Sprache</system:String>
+    <system:String x:Key="Refresh">Aktualisieren</system:String>
+    <system:String x:Key="Minimize">Minimieren</system:String>
+    <system:String x:Key="Close">Schließen</system:String>
+
+    <!-- Navigation Buttons -->
+    <system:String x:Key="Journal">Journal</system:String>
+    <system:String x:Key="Processes">Prozesse</system:String>
+    <system:String x:Key="Timeline">Zeitleiste</system:String>
+    <system:String x:Key="Drives">Laufwerke</system:String>
+
+    <!-- Welcome View -->
+    <system:String x:Key="VortexViewer">Vortex Prefetch Analyzer</system:String>
+    <system:String x:Key="StartTrace">Verfolgung starten</system:String>
+    <system:String x:Key="StartAnalysis">Analyse starten</system:String>
+    <system:String x:Key="SelectFATDrive">FAT-Laufwerk zur Analyse auswählen</system:String>
+    <system:String x:Key="Loading">Laden</system:String>
+    <system:String x:Key="Recovering">Wiederherstellung</system:String>
+    <system:String x:Key="ProcessIsProtected">Prozess ist geschützt</system:String>
+
+    <!-- FAT Results View -->
+    <system:String x:Key="FATFileSystemAnalysis">FAT-Dateisystemanalyse</system:String>
+    <system:String x:Key="FolderStructure">Ordnerstruktur</system:String>
+    <system:String x:Key="Files">Dateien</system:String>
+    <system:String x:Key="Name">Name</system:String>
+    <system:String x:Key="Type">Typ</system:String>
+    <system:String x:Key="Status">Status</system:String>
+    <system:String x:Key="Size">Größe</system:String>
+    <system:String x:Key="Modified">Geändert</system:String>
+    <system:String x:Key="Created">Erstellt</system:String>
+    <system:String x:Key="Attributes">Attribute</system:String>
+    <system:String x:Key="StartCluster">Start-Cluster</system:String>
+    <system:String x:Key="SlackSpace">Slack-Speicher</system:String>
+    <system:String x:Key="ReconstructionSource">Rekonstruktionsquelle</system:String>
+    <system:String x:Key="CopyAll">Alles kopieren</system:String>
+
+    <!-- Dashboard View -->
+    <system:String x:Key="SystemInformationDashboard">System-Informations-Dashboard</system:String>
+    <system:String x:Key="HardwareInformation">Hardware-Informationen</system:String>
+    <system:String x:Key="SoftwareInformation">Software-Informationen</system:String>
+    <system:String x:Key="TamperingChecks">Manipulationsprüfungen</system:String>
+    <system:String x:Key="Property">Eigenschaft</system:String>
+    <system:String x:Key="Value">Wert</system:String>
+
+    <!-- Journal View -->
+    <system:String x:Key="Deleted">Gelöscht</system:String>
+    <system:String x:Key="Renamed">Umbenannt</system:String>
+    <system:String x:Key="DataChanged">Daten geändert</system:String>
+    <system:String x:Key="Timestamp">Zeitstempel</system:String>
+    <system:String x:Key="Path">Pfad</system:String>
+    <system:String x:Key="Extension">Erweiterung</system:String>
+    <system:String x:Key="Reason">Grund</system:String>
+    <system:String x:Key="ShowInfo">Info anzeigen</system:String>
+    <system:String x:Key="Entries">Einträge</system:String>
+    <system:String x:Key="ReduceDuplicates">Duplikate reduzieren</system:String>
+    <system:String x:Key="FilterSpamlogs">Spam-Logs filtern</system:String>
+    <system:String x:Key="First">Erste</system:String>
+    <system:String x:Key="Last">Letzte</system:String>
+    <system:String x:Key="GoToFirstPage">Zur ersten Seite gehen</system:String>
+    <system:String x:Key="Previous5Pages">5 Seiten zurück</system:String>
+    <system:String x:Key="PreviousPage">Vorherige Seite</system:String>
+    <system:String x:Key="NextPage">Nächste Seite</system:String>
+    <system:String x:Key="Next5Pages">5 Seiten vor</system:String>
+    <system:String x:Key="GoToLastPage">Zur letzten Seite gehen</system:String>
+
+    <!-- Processes View -->
+    <system:String x:Key="GetStrings">Zeichenfolgen abrufen</system:String>
+    <system:String x:Key="ChooseProcess">Prozess auswählen</system:String>
+    <system:String x:Key="SearchStrings">Zeichenfolgen suchen (Regex erlaubt)</system:String>
+    <system:String x:Key="GetPCA">PCA abrufen</system:String>
+    <system:String x:Key="Min">Min.:</system:String>
+    <system:String x:Key="Max">Max.:</system:String>
+    <system:String x:Key="Regex">Regex</system:String>
+    <system:String x:Key="StartsWith">Beginnt mit</system:String>
+    <system:String x:Key="EndsWith">Endet mit</system:String>
+    <system:String x:Key="UnicodeStrings">Unicode-Zeichenfolgen</system:String>
+    <system:String x:Key="CombineProcesses">Prozesse kombinieren</system:String>
+    <system:String x:Key="ReduceNonsenseStrings">Unsinnige Zeichenfolgen reduzieren</system:String>
+    <system:String x:Key="WinPathStrings">Win-Pfad-Zeichenfolgen</system:String>
+    <system:String x:Key="URLStrings">URL-Zeichenfolgen</system:String>
+    <system:String x:Key="Stringlist">Zeichenfolgenliste</system:String>
+    <system:String x:Key="ShowProcessUptimes">Prozess-Laufzeiten anzeigen</system:String>
+    <system:String x:Key="Strings">Zeichenfolgen</system:String>
+    <system:String x:Key="MinLengthTooltip">Minimale Zeichenfolgenlänge zum Extrahieren aus dem Prozessspeicher.</system:String>
+    <system:String x:Key="MaxLengthTooltip">Maximale Zeichenfolgenlänge zum Extrahieren. Leer lassen oder ∞ für unbegrenzt verwenden.</system:String>
+    <system:String x:Key="GetPCATooltip">PCA (Program Compatibility Assistant)-Traces aus Explorer.exe, RuntimeBroker.exe und PCASVC extrahieren</system:String>
+    <system:String x:Key="RegexTooltip">Regex-Suche zur Zeichenfolgenfilterung aktivieren.</system:String>
+    <system:String x:Key="StartsWithTooltip">Zeichenfolgen filtern, die mit dem Suchtext beginnen.</system:String>
+    <system:String x:Key="EndsWithTooltip">Zeichenfolgen filtern, die mit dem Suchtext enden.</system:String>
+    <system:String x:Key="UnicodeStringsTooltip">Extrahiert Unicode-Zeichenfolgen aus dem Prozessspeicher.</system:String>
+    <system:String x:Key="CombineProcessesTooltip">Gruppiert alle Prozesse mit demselben Namen und kombiniert ihre Ergebnisse. WARNUNG: Kann bei großen Prozessen langsam sein und viele Ressourcen verbrauchen.</system:String>
+    <system:String x:Key="ReduceDuplicatesTooltip">Entfernt doppelte Zeichenfolgen aus den Ergebnissen.</system:String>
+    <system:String x:Key="ReduceNonsenseStringsTooltip">Filtert Zeichenfolgen heraus, die wahrscheinlich zufällig oder bedeutungslos sind.</system:String>
+    <system:String x:Key="WinPathStringsTooltip">Extrahiert Windows-Dateipfade (z.B. C:\Pfad\zur\Datei.exe) aus dem Prozessspeicher.</system:String>
+    <system:String x:Key="URLStringsTooltip">Extrahiert Web-URLs (z.B. https://example.com) aus dem Prozessspeicher, gemäß RFC 3986.</system:String>
+
+    <!-- FAT Analyzer View -->
+    <system:String x:Key="FATAnalyzer">Prefetch-Analysator</system:String>
+    <system:String x:Key="UnmarkDeleted">Gelöschte nicht markieren</system:String>
+    <system:String x:Key="UnmarkUnsigned">Unsignierte nicht markieren</system:String>
+    <system:String x:Key="UnmarkHidden">Versteckte nicht markieren</system:String>
+    <system:String x:Key="EvidenceTree">Beweisbaum</system:String>
+    <system:String x:Key="DeletedFiles">[Gelöschte Dateien]</system:String>
+    <system:String x:Key="AllFiles">[Alle Dateien]</system:String>
+    <system:String x:Key="DeletedDirectory">[Gelöschtes Verzeichnis]</system:String>
+    <system:String x:Key="DeletedFile">[Gelöschte Datei]</system:String>
+    <system:String x:Key="Unknown">[Unbekannt]</system:String>
+    <system:String x:Key="DeletedIndicator">[GELÖSCHT]</system:String>
+    <system:String x:Key="CopyValue">Wert kopieren</system:String>
+    <system:String x:Key="CopyRow">Zeile kopieren</system:String>
+    <system:String x:Key="Recover">Wiederherstellen</system:String>
+    <system:String x:Key="RecoverAll">Alle Wiederherstellen</system:String>
+    <system:String x:Key="SizeKB">Größe (KB)</system:String>
+    <system:String x:Key="LastActivity">Letzte Aktivität</system:String>
+    <system:String x:Key="Signature">Signatur</system:String>
+    <system:String x:Key="ItemsFormat">{0} Elemente</system:String>
+
+    <!-- Prefetch View -->
+    <system:String x:Key="SearchSourcePath">Quellpfad suchen</system:String>
+    <system:String x:Key="SearchFilesLoaded">Geladene Dateien suchen</system:String>
+    <system:String x:Key="TamperingCheck">Manipulationsprüfung</system:String>
+    <system:String x:Key="SourceName">Quellname</system:String>
+    <system:String x:Key="SourcePath">Quellpfad</system:String>
+    <system:String x:Key="RunCount">Anzahl Ausführungen</system:String>
+    <system:String x:Key="LastRun">Letzter Lauf</system:String>
+    <system:String x:Key="LastRun8">Ältester Lauf</system:String>
+    <system:String x:Key="SourceCreatedOn">Quelle erstellt am</system:String>
+    <system:String x:Key="SourceModifiedOn">Quelle geändert am</system:String>
+    <system:String x:Key="FilesLoaded">Geladene Dateien</system:String>
+
+    <!-- Welcome View Status Messages -->
+    <system:String x:Key="NoFATDrivesFound">Keine FAT-Laufwerke gefunden</system:String>
+    <system:String x:Key="ErrorLoadingDrives">Fehler beim Laden der Laufwerke: {0}</system:String>
+    <system:String x:Key="StartingAnalysis">Analyse wird gestartet</system:String>
+    <system:String x:Key="Starting Analysis">Analyse wird gestartet</system:String>
+    <system:String x:Key="Analyzing Prefetch Files">Prefetch-Dateien werden analysiert</system:String>
+    <system:String x:Key="Analysis Complete">Analyse abgeschlossen!</system:String>
+    <system:String x:Key="AnalyzingPrefetchFiles">Prefetch-Dateien werden analysiert</system:String>
+    <system:String x:Key="ErrorAnalyzingPrefetch">Fehler bei der Analyse der Prefetch-Dateien: {0}</system:String>
+    <system:String x:Key="AnalyzingDrive">Laufwerk {0} wird analysiert</system:String>
+    <system:String x:Key="ScanningExistingFiles">Vorhandene Dateien werden gescannt</system:String>
+    <system:String x:Key="ScanningDeletedFiles">Suche nach gelöschten Dateien</system:String>
+    <system:String x:Key="AnalysisComplete">Analyse abgeschlossen!</system:String>
+    <system:String x:Key="Error">Fehler</system:String>
+    <system:String x:Key="ErrorAnalyzingDrive">Fehler beim Analysieren des Laufwerks: {0}</system:String>
+    <system:String x:Key="UnableToAccessViewModel">Zugriff auf MainWindowViewModel nicht möglich</system:String>
+    <system:String x:Key="AdminPrivilegesRequired">Administratorrechte erforderlich, um nach gelöschten Dateien zu suchen. Nur vorhandene Dateien werden angezeigt.</system:String>
+    <system:String x:Key="LimitedAccess">Eingeschränkter Zugriff</system:String>
+    <system:String x:Key="AnalysisError">Analysefehler</system:String>
+
+    <system:String x:Key="ShowDeleted">Gelöschte anzeigen</system:String>
+    <system:String x:Key="ShowOnlyUnknown">Nur Unbekannt anzeigen</system:String>
+    <system:String x:Key="ShowOnlyExe">Nur Exe anzeigen</system:String>
+    <system:String x:Key="ShowOnlyWinPaths">Nur WinPath-Pfade anzeigen</system:String>
+    <system:String x:Key="ShowOnlyNotSigned">Nur Nicht signierte anzeigen</system:String>
+    <system:String x:Key="ColoredResults">Farbige Ergebnisse</system:String>
+    <system:String x:Key="FilterByDescription">Beschreibung</system:String>
+    <system:String x:Key="FilterBySource">Quelle</system:String>
+    <system:String x:Key="Description">Beschreibung</system:String>
+    <system:String x:Key="Signed">Signiert</system:String>
+    <system:String x:Key="Source">Quelle</system:String>
+    <system:String x:Key="ShowParseInfo">Parsinformationen anzeigen</system:String>
+    <system:String x:Key="RemoveDuplicates">Duplikate entfernen</system:String>
+    <system:String x:Key="HideSystem32Logs">System32-Protokolle ausblenden</system:String>
+    <system:String x:Key="ShowParseInfoTooltip">Eintragsanzahlen pro Quelle anzeigen (hilfreich zur Erkennung von Datenmanipulation)</system:String>
+    <system:String x:Key="RemoveDuplicatesTooltip">Duplizierte Einträge mit identischem Zeitstempel und Pfad herausfiltern (Andere Infos ignoriert)</system:String>
+    <system:String x:Key="HideSystem32LogsTooltip">Alle Dateien aus C:\Windows\System32\ ausblenden</system:String>
+
+    <!-- Drives View -->
+    <system:String x:Key="Overview">Überblick</system:String>
+    <system:String x:Key="ConnectedDrives">Angeschlossene Laufwerke</system:String>
+    <system:String x:Key="DeviceName">Gerätename</system:String>
+    <system:String x:Key="Label">Bezeichnung</system:String>
+    <system:String x:Key="Drive">Laufwerk</system:String>
+    <system:String x:Key="BusType">Bus-Typ</system:String>
+    <system:String x:Key="Serial">Seriennummer</system:String>
+    <system:String x:Key="UniqueIdentifier">Eindeutige Kennung</system:String>
+    <system:String x:Key="DiskNumber">Datenträger#</system:String>
+    <system:String x:Key="FileSystem">Dateisystem</system:String>
+    <system:String x:Key="PartitionID">Partition-ID</system:String>
+    <system:String x:Key="FormatDate">Formatdatum</system:String>
+    <system:String x:Key="Action">Aktion</system:String>
+    <system:String x:Key="Log">Protokoll</system:String>
+    <system:String x:Key="Page">Seite:</system:String>
+
+    <!-- Context Menu -->
+    <system:String x:Key="GoTo">Gehe zu</system:String>
+
+    <!-- Info Popup Window -->
+    <system:String x:Key="Info">Info</system:String>
+
+
+    <!-- Error Messages -->
+    <system:String x:Key="AccessDenied">Zugriff verweigert</system:String>
+    <system:String x:Key="ProcessCannotBeOpened">Dieser Prozess kann nicht geöffnet werden.</system:String>
+
+</ResourceDictionary>

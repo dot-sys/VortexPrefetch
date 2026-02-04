@@ -1,0 +1,202 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Main Window -->
+    <system:String x:Key="Language">Мова</system:String>
+    <system:String x:Key="Refresh">Оновити</system:String>
+    <system:String x:Key="Minimize">Згорнути</system:String>
+    <system:String x:Key="Close">Закрити</system:String>
+
+    <!-- Navigation Buttons -->
+    <system:String x:Key="Journal">Журнал</system:String>
+    <system:String x:Key="Processes">Процеси</system:String>
+    <system:String x:Key="Timeline">Хронологія</system:String>
+    <system:String x:Key="Drives">Диски</system:String>
+
+    <!-- Welcome View -->
+    <system:String x:Key="VortexViewer">Vortex Prefetch Analyzer</system:String>
+    <system:String x:Key="StartTrace">Почати відстеження</system:String>
+    <system:String x:Key="StartAnalysis">Почати аналіз</system:String>
+    <system:String x:Key="SelectFATDrive">Виберіть FAT диск для аналізу</system:String>
+    <system:String x:Key="Loading">Завантаження</system:String>
+    <system:String x:Key="Recovering">Відновлення</system:String>
+    <system:String x:Key="ProcessIsProtected">Процес захищено</system:String>
+
+    <!-- FAT Results View -->
+    <system:String x:Key="FATFileSystemAnalysis">Аналіз файлової системи FAT</system:String>
+    <system:String x:Key="FolderStructure">Структура папок</system:String>
+    <system:String x:Key="Files">Файли</system:String>
+    <system:String x:Key="Name">Ім'я</system:String>
+    <system:String x:Key="Type">Тип</system:String>
+    <system:String x:Key="Status">Статус</system:String>
+    <system:String x:Key="Size">Розмір</system:String>
+    <system:String x:Key="Modified">Змінено</system:String>
+    <system:String x:Key="Created">Створено</system:String>
+    <system:String x:Key="Attributes">Атрибути</system:String>
+    <system:String x:Key="StartCluster">Початковий кластер</system:String>
+    <system:String x:Key="SlackSpace">Вільний простір</system:String>
+    <system:String x:Key="ReconstructionSource">Джерело реконструкції</system:String>
+    <system:String x:Key="CopyAll">Копіювати все</system:String>
+
+    <!-- Dashboard View -->
+    <system:String x:Key="SystemInformationDashboard">Інформаційна панель системи</system:String>
+    <system:String x:Key="HardwareInformation">Інформація про обладнання</system:String>
+    <system:String x:Key="SoftwareInformation">Інформація про програмне забезпечення</system:String>
+    <system:String x:Key="TamperingChecks">Перевірки втручання</system:String>
+    <system:String x:Key="Property">Властивість</system:String>
+    <system:String x:Key="Value">Значення</system:String>
+
+    <!-- Journal View -->
+    <system:String x:Key="Deleted">Видалено</system:String>
+    <system:String x:Key="Renamed">Перейменовано</system:String>
+    <system:String x:Key="DataChanged">Дані змінено</system:String>
+    <system:String x:Key="Timestamp">Часова позначка</system:String>
+    <system:String x:Key="Path">Шлях</system:String>
+    <system:String x:Key="Extension">Розширення</system:String>
+    <system:String x:Key="Reason">Причина</system:String>
+    <system:String x:Key="ShowInfo">Показати інформацію</system:String>
+    <system:String x:Key="Entries">Записи</system:String>
+    <system:String x:Key="ReduceDuplicates">Зменшити дублікати</system:String>
+    <system:String x:Key="FilterSpamlogs">Фільтрувати спам-логи</system:String>
+    <system:String x:Key="First">Перша</system:String>
+    <system:String x:Key="Last">Остання</system:String>
+    <system:String x:Key="GoToFirstPage">Перейти на першу сторінку</system:String>
+    <system:String x:Key="Previous5Pages">Назад на 5 сторінок</system:String>
+    <system:String x:Key="PreviousPage">Попередня сторінка</system:String>
+    <system:String x:Key="NextPage">Наступна сторінка</system:String>
+    <system:String x:Key="Next5Pages">Вперед на 5 сторінок</system:String>
+    <system:String x:Key="GoToLastPage">Перейти на останню сторінку</system:String>
+
+    <!-- Processes View -->
+    <system:String x:Key="GetStrings">Отримати рядки</system:String>
+    <system:String x:Key="ChooseProcess">Вибрати процес</system:String>
+    <system:String x:Key="SearchStrings">Пошук рядків (дозволено regex)</system:String>
+    <system:String x:Key="GetPCA">Отримати PCA</system:String>
+    <system:String x:Key="Min">Мін.:</system:String>
+    <system:String x:Key="Max">Макс.:</system:String>
+    <system:String x:Key="Regex">Regex</system:String>
+    <system:String x:Key="StartsWith">Починається з</system:String>
+    <system:String x:Key="EndsWith">Закінчується на</system:String>
+    <system:String x:Key="UnicodeStrings">Unicode рядки</system:String>
+    <system:String x:Key="CombineProcesses">Об'єднати процеси</system:String>
+    <system:String x:Key="ReduceNonsenseStrings">Зменшити безглузді рядки</system:String>
+    <system:String x:Key="WinPathStrings">Рядки шляхів Win</system:String>
+    <system:String x:Key="URLStrings">URL рядки</system:String>
+    <system:String x:Key="Stringlist">Список рядків</system:String>
+    <system:String x:Key="ShowProcessUptimes">Показати час роботи процесів</system:String>
+    <system:String x:Key="Strings">Рядки</system:String>
+    <system:String x:Key="MinLengthTooltip">Мінімальна довжина рядка для витягування з пам'яті процесу.</system:String>
+    <system:String x:Key="MaxLengthTooltip">Максимальна довжина рядка для витягування. Залиште порожнім або використовуйте ∞ для необмеженої.</system:String>
+    <system:String x:Key="GetPCATooltip">Витягти сліди PCA (Program Compatibility Assistant) з Explorer.exe, RuntimeBroker.exe та PCASVC</system:String>
+    <system:String x:Key="RegexTooltip">Увімкнути пошук regex для фільтрації рядків.</system:String>
+    <system:String x:Key="StartsWithTooltip">Фільтрувати рядки, які починаються з пошукового тексту.</system:String>
+    <system:String x:Key="EndsWithTooltip">Фільтрувати рядки, які закінчуються на пошуковий текст.</system:String>
+    <system:String x:Key="UnicodeStringsTooltip">Витягує Unicode рядки з пам'яті процесу.</system:String>
+    <system:String x:Key="CombineProcessesTooltip">Групує всі процеси з однаковим ім'ям та об'єднує їх результати. ПОПЕРЕДЖЕННЯ: Може бути повільним і використовувати багато ресурсів для великих процесів.</system:String>
+    <system:String x:Key="ReduceDuplicatesTooltip">Видаляє дублікати рядків з результатів.</system:String>
+    <system:String x:Key="ReduceNonsenseStringsTooltip">Фільтрує рядки, які, ймовірно, випадкові або безглузді.</system:String>
+    <system:String x:Key="WinPathStringsTooltip">Витягує шляхи файлів у стилі Windows (напр. C:\Шлях\до\Файлу.exe) з пам'яті процесу.</system:String>
+    <system:String x:Key="URLStringsTooltip">Витягує веб-URL (напр. https://example.com) з пам'яті процесу, відповідно до RFC 3986.</system:String>
+
+    <!-- FAT Analyzer View -->
+    <system:String x:Key="FATAnalyzer">Prefetch аналізатор</system:String>
+    <system:String x:Key="UnmarkDeleted">Зняти позначку видалених</system:String>
+    <system:String x:Key="UnmarkUnsigned">Зняти позначку непідписаних</system:String>
+    <system:String x:Key="UnmarkHidden">Зняти позначку прихованих</system:String>
+    <system:String x:Key="EvidenceTree">Дерево доказів</system:String>
+    <system:String x:Key="DeletedFiles">[Видалені файли]</system:String>
+    <system:String x:Key="AllFiles">[Усі файли]</system:String>
+    <system:String x:Key="DeletedDirectory">[Видалена тека]</system:String>
+    <system:String x:Key="DeletedFile">[Видалений файл]</system:String>
+    <system:String x:Key="Unknown">[Невідомо]</system:String>
+    <system:String x:Key="DeletedIndicator">[ВИДАЛЕНО]</system:String>
+    <system:String x:Key="CopyValue">Копіювати значення</system:String>
+    <system:String x:Key="CopyRow">Копіювати рядок</system:String>
+    <system:String x:Key="Recover">Відновити</system:String>
+    <system:String x:Key="RecoverAll">Відновити все</system:String>
+    <system:String x:Key="SizeKB">Розмір (КБ)</system:String>
+    <system:String x:Key="LastActivity">Остання активність</system:String>
+    <system:String x:Key="Signature">Підпис</system:String>
+    <system:String x:Key="ItemsFormat">{0} елементів</system:String>
+
+    <!-- Prefetch View -->
+    <system:String x:Key="SearchSourcePath">Пошук шляху джерела</system:String>
+    <system:String x:Key="SearchFilesLoaded">Пошук завантажених файлів</system:String>
+    <system:String x:Key="TamperingCheck">Перевірка втручання</system:String>
+    <system:String x:Key="SourceName">Назва джерела</system:String>
+    <system:String x:Key="SourcePath">Шлях джерела</system:String>
+    <system:String x:Key="RunCount">Кількість запусків</system:String>
+    <system:String x:Key="LastRun">Останній запуск</system:String>
+    <system:String x:Key="LastRun8">Найдавніший запуск</system:String>
+    <system:String x:Key="SourceCreatedOn">Джерело створено</system:String>
+    <system:String x:Key="SourceModifiedOn">Джерело змінено</system:String>
+    <system:String x:Key="FilesLoaded">Завантажені файли</system:String>
+
+    <!-- Welcome View Status Messages -->
+    <system:String x:Key="NoFATDrivesFound">FAT диски не знайдено</system:String>
+    <system:String x:Key="ErrorLoadingDrives">Помилка завантаження дисків: {0}</system:String>
+    <system:String x:Key="StartingAnalysis">Початок аналізу</system:String>
+    <system:String x:Key="Starting Analysis">Початок аналізу</system:String>
+    <system:String x:Key="Analyzing Prefetch Files">Аналіз файлів Prefetch</system:String>
+    <system:String x:Key="Analysis Complete">Аналіз завершено!</system:String>
+    <system:String x:Key="AnalyzingPrefetchFiles">Аналіз файлів Prefetch</system:String>
+    <system:String x:Key="ErrorAnalyzingPrefetch">Помилка аналізу файлів Prefetch: {0}</system:String>
+    <system:String x:Key="AnalyzingDrive">Аналіз диска {0}</system:String>
+    <system:String x:Key="ScanningExistingFiles">Сканування існуючих файлів</system:String>
+    <system:String x:Key="ScanningDeletedFiles">Пошук видалених файлів</system:String>
+    <system:String x:Key="AnalysisComplete">Аналіз завершено!</system:String>
+    <system:String x:Key="Error">Помилка</system:String>
+    <system:String x:Key="ErrorAnalyzingDrive">Помилка аналізу диска: {0}</system:String>
+    <system:String x:Key="UnableToAccessViewModel">Неможливо отримати доступ до MainWindowViewModel</system:String>
+    <system:String x:Key="AdminPrivilegesRequired">Для сканування видалених файлів потрібні права адміністратора. Будуть показані тільки існуючі файли.</system:String>
+    <system:String x:Key="LimitedAccess">Обмежений доступ</system:String>
+    <system:String x:Key="AnalysisError">Помилка аналізу</system:String>
+
+    <system:String x:Key="ShowDeleted">Показати видалені</system:String>
+    <system:String x:Key="ShowOnlyUnknown">Показати лише невідомі</system:String>
+    <system:String x:Key="ShowOnlyExe">Показати лише Exe</system:String>
+    <system:String x:Key="ShowOnlyWinPaths">Показати лише WinPaths</system:String>
+    <system:String x:Key="ShowOnlyNotSigned">Показати лише не підписані</system:String>
+    <system:String x:Key="ColoredResults">Кольорові результати</system:String>
+    <system:String x:Key="FilterByDescription">Опис</system:String>
+    <system:String x:Key="FilterBySource">Джерело</system:String>
+    <system:String x:Key="Description">Опис</system:String>
+    <system:String x:Key="Signed">Підписано</system:String>
+    <system:String x:Key="Source">Джерело</system:String>
+    <system:String x:Key="ShowParseInfo">Показати інформацію парсингу</system:String>
+    <system:String x:Key="RemoveDuplicates">Видалити дублікати</system:String>
+    <system:String x:Key="HideSystem32Logs">Приховати журнали System32</system:String>
+    <system:String x:Key="ShowParseInfoTooltip">Показати кількість записів по джерелам (корисно для виявлення маніпуляцій з даними)</system:String>
+    <system:String x:Key="RemoveDuplicatesTooltip">Фільтрувати подвійні записи з однаковими Timestamp і Path (Інша інформація ігнорується)</system:String>
+    <system:String x:Key="HideSystem32LogsTooltip">Приховати всі файли з C:\Windows\System32\</system:String>
+
+    <!-- Drives View -->
+    <system:String x:Key="Overview">Огляд</system:String>
+    <system:String x:Key="ConnectedDrives">Підключені диски</system:String>
+    <system:String x:Key="DeviceName">Назва пристрою</system:String>
+    <system:String x:Key="Label">Мітка</system:String>
+    <system:String x:Key="Drive">Диск</system:String>
+    <system:String x:Key="BusType">Тип шини</system:String>
+    <system:String x:Key="Serial">Серійний номер</system:String>
+    <system:String x:Key="UniqueIdentifier">Унікальний ідентифікатор</system:String>
+    <system:String x:Key="DiskNumber">Диск#</system:String>
+    <system:String x:Key="FileSystem">Файлова система</system:String>
+    <system:String x:Key="PartitionID">ID розділу</system:String>
+    <system:String x:Key="FormatDate">Дата форматування</system:String>
+    <system:String x:Key="Action">Дія</system:String>
+    <system:String x:Key="Log">Журнал</system:String>
+    <system:String x:Key="Page">Сторінка:</system:String>
+
+    <!-- Context Menu -->
+    <system:String x:Key="GoTo">Перейти до</system:String>
+
+    <!-- Info Popup Window -->
+    <system:String x:Key="Info">Інформація</system:String>
+
+
+    <!-- Error Messages -->
+    <system:String x:Key="AccessDenied">Доступ заборонено</system:String>
+    <system:String x:Key="ProcessCannotBeOpened">Цей процес неможливо відкрити.</system:String>
+
+</ResourceDictionary>
