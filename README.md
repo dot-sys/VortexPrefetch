@@ -5,7 +5,7 @@
 <h2 align="center">Vortex Prefetch Analyzer</h2>
 
 <p align="center">
-  Standalone C# library for deep Windows Prefetch (.pf) parsing. Handles Win10 and 11, loaded files, volume mapping, sigs & run history!<br><br>
+  Standalone C# Tool for deep Windows Prefetch (.pf) parsing. Handles Win10 and 11, loaded files, volume mapping, sigs & run history!<br><br>
   ⭐ Star this project if you found it useful.
 </p>
 
