@@ -16,7 +16,7 @@
 
 ### Overview
 
-**Vortex Prefetch Analyzer** is a robust .NET library for forensic analysis of Windows Prefetch files in Win10 and Win11. Decompresses, patches Win11 version bugs, extracts loaded files/modules/directories via reflection, resolves VOLUME paths and pulls extra exe metadata (Dates, MD5, signatures).
+**Vortex Prefetch Analyzer** is a robust .NET Tool for forensic analysis of Windows Prefetch files in Win10 and Win11. Decompresses, patches Win11 version bugs, extracts loaded files/modules/directories via reflection, resolves VOLUME paths and pulls extra exe metadata (Dates, MD5, signatures).
 
 #### Core Parsing
 
