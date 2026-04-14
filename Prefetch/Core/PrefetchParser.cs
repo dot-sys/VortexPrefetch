@@ -61,7 +61,13 @@ namespace Prefetch
                     runTimes.Add(DateTimeOffset.FromFileTime(ft));
             }
             if (bytes.Length >= 212)
+            {
                 runCount = (int)BitConverter.ToUInt32(bytes, 208);
+                if (BitConverter.ToInt32(bytes, 204) != 0)
+                {
+                    runCount = (int)BitConverter.ToUInt32(bytes, 200);
+                }
+            }
 
             var filenames = ParseFilenameStrings(bytes, filenameOffset, filenameSize);
             var volumes   = ParseVolumes(bytes, volumesOffset, (int)volumesCount, version);

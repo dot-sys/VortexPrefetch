@@ -201,7 +201,7 @@
                                       VirtualizingStackPanel.VirtualizationMode="Recycling"
                                       ScrollViewer.CanContentScroll="True">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="" Binding="{Binding Index}" Width="30"/>
+                                    <DataGridTextColumn Header="" Binding="{Binding Index}" Width="35"/>
                                     <DataGridTextColumn Header="{DynamicResource FilesLoaded}" Binding="{Binding Directory}" Width="*"/>
                                 </DataGrid.Columns>
                             </DataGrid>
