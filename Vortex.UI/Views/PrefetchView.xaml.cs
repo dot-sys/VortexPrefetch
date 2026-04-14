@@ -353,34 +353,9 @@ namespace Vortex.UI.Views
         {
             try
             {
-                var psi = new ProcessStartInfo
+                using (var controller = new System.ServiceProcess.ServiceController(serviceName))
                 {
-                    FileName = "sc.exe",
-                    Arguments = $"query \"{serviceName}\"",
-                    RedirectStandardOutput = true,
-                    UseShellExecute = false,
-                    CreateNoWindow = true
-                };
-
-                using (var process = Process.Start(psi))
-                {
-                    if (process == null)
-                        return null;
-
-                    var output = process.StandardOutput.ReadToEnd();
-                    process.WaitForExit(2000);
-
-                    var line = output
-                        .Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries)
-                        .FirstOrDefault(l => l.IndexOf("STATE", StringComparison.OrdinalIgnoreCase) >= 0);
-
-                    if (line == null)
-                        return null;
-
-                    if (line.IndexOf("RUNNING", StringComparison.OrdinalIgnoreCase) >= 0)
-                        return true;
-
-                    return false;
+                    return controller.Status == System.ServiceProcess.ServiceControllerStatus.Running;
                 }
             }
             catch
@@ -417,7 +392,7 @@ namespace Vortex.UI.Views
         private TamperingCheckResult CheckRecentPrefetchDeletion()
         {
             const string name = "Recent Prefetch Deletion";
-            const string prefetchDir = @"C:\\Windows\\Prefetch";
+            var prefetchDir = Path.Combine(Environment.GetEnvironmentVariable("SystemRoot") ?? @"C:\Windows", "Prefetch");
 
             try
             {
@@ -492,7 +467,7 @@ namespace Vortex.UI.Views
         private TamperingCheckResult CheckPrefetchFilesCount()
         {
             const string name = "Prefetch Files Count";
-            const string prefetchDir = @"C:\\Windows\\Prefetch";
+            var prefetchDir = Path.Combine(Environment.GetEnvironmentVariable("SystemRoot") ?? @"C:\Windows", "Prefetch");
 
             try
             {

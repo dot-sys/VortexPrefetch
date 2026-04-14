@@ -11,8 +11,8 @@ namespace Prefetch
     {
         // Run time display format string
         private const string RunTimeFormat = "yyyy-MM-dd HH:mm:ss";
-        // Prefetch directory prefix constant
-        private const string PrefetchDirectoryPrefix = @"C:\Windows\Prefetch\";
+        private static readonly string PrefetchDirectoryPrefix =
+            System.IO.Path.Combine(Environment.GetEnvironmentVariable("SystemRoot") ?? @"C:\Windows", "Prefetch") + System.IO.Path.DirectorySeparatorChar;
 
         // Analyze a prefetch file and return data
         public static PrefetchData AnalyzePrefetchFile(string filePath)

@@ -59,7 +59,7 @@ namespace Prefetch
                 }
             }
 
-            return TryOpenFromTempFile(bytes, out prefetch);
+            return false;
         }
 
         // Try opening patched Windows 11 prefetch
@@ -97,44 +97,6 @@ namespace Prefetch
             {
                 prefetch = null;
                 return false;
-            }
-        }
-
-        // Try opening prefetch from temporary file
-        private static bool TryOpenFromTempFile(byte[] bytes, out IPrefetch prefetch)
-        {
-            prefetch = null;
-
-            if (bytes == null || bytes.Length == 0)
-            {
-                return false;
-            }
-
-            var tempPath = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString("N") + ".pf");
-
-            try
-            {
-                File.WriteAllBytes(tempPath, bytes);
-                prefetch = PrefetchFile.Open(tempPath);
-                return prefetch != null;
-            }
-            catch
-            {
-                prefetch = null;
-                return false;
-            }
-            finally
-            {
-                try
-                {
-                    if (File.Exists(tempPath))
-                    {
-                        File.Delete(tempPath);
-                    }
-                }
-                catch
-                {
-                }
             }
         }
 

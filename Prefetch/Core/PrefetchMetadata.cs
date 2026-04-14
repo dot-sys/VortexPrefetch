@@ -241,13 +241,9 @@ namespace Prefetch
         {
             try
             {
-                using (var cert = new X509Certificate2(X509Certificate.CreateFromSignedFile(executablePath)))
-                using (var chain = new X509Chain())
+                using (var cert = X509Certificate.CreateFromSignedFile(executablePath))
                 {
-                    chain.ChainPolicy.RevocationMode = X509RevocationMode.NoCheck;
-                    chain.ChainPolicy.RevocationFlag = X509RevocationFlag.ExcludeRoot;
-                    var isValid = chain.Build(cert);
-                    return isValid ? "Signed" : "Unsigned";
+                    return cert != null ? "Signed" : "Unsigned";
                 }
             }
             catch

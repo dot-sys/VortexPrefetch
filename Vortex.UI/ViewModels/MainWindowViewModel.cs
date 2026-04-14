@@ -17,47 +17,18 @@ namespace Vortex.UI.ViewModels
     {
         // Navigation frame for page routing
         private Frame _mainFrame;
-        // Dashboard viewmodel instance
-        private DashboardViewModel _dashboardViewModel;
         // Prefetch viewmodel instance
         private PrefetchViewModel _prefetchViewModel;
         // Registered framework viewmodel collection
         private readonly List<FrameworkViewModel> _frameworkViewModels;
         // Current active view identifier
         private string _currentView = "Welcome";
-        // Indicates if data loaded successfully
-        private bool _isDataLoaded = false;
-
-        // Gets or sets data loaded state
-        public bool IsDataLoaded
-        {
-            get => _isDataLoaded;
-            set
-            {
-                if (_isDataLoaded != value)
-                {
-                    _isDataLoaded = value;
-                    OnPropertyChanged();
-                    OnPropertyChanged(nameof(CanNavigateToDashboard));
-                }
-            }
-        }
-
-        // Checks if navigation to dashboard allowed
-        public bool CanNavigateToDashboard => IsDataLoaded;
 
         // Initializes viewmodel and command bindings
         public MainWindowViewModel()
         {
-            NavigateToDashboardCommand = new RelayCommand(NavigateToDashboard, () => CanNavigateToDashboard);
             _frameworkViewModels = new List<FrameworkViewModel>();
         }
-
-        // Dashboard navigation command instance
-        public ICommand NavigateToDashboardCommand { get; }
-
-        // Gets dashboard viewmodel reference
-        public DashboardViewModel DashboardViewModel => _dashboardViewModel;
 
         // Gets prefetch viewmodel reference
         public PrefetchViewModel PrefetchViewModel
@@ -114,23 +85,6 @@ namespace Vortex.UI.ViewModels
             }
         }
 
-        // Navigates to dashboard page
-        public void NavigateToDashboard()
-        {
-            if (_mainFrame != null)
-            {
-                if (!IsDataLoaded)
-                {
-                    NavigateToWelcome();
-                    return;
-                }
-
-                var dashboardView = new DashboardView { DataContext = _dashboardViewModel };
-                _mainFrame.Navigate(dashboardView);
-                _currentView = "Dashboard";
-            }
-        }
-
         // Navigates to prefetch analyzer
         public void NavigateToPrefetchAnalyzer()
         {
@@ -142,26 +96,14 @@ namespace Vortex.UI.ViewModels
             }
         }
 
-        // Creates new dashboard viewmodel instance
-        private void InitializeDashboardViewModel()
-        {
-            if (_dashboardViewModel == null)
-            {
-                _dashboardViewModel = new DashboardViewModel();
-            }
-        }
-
         // Initializes all framework trace operations
         public virtual void StartAllTraces()
         {
-            InitializeDashboardViewModel();
         }
 
         // Clears data and reloads welcome view
         public void RefreshCurrentView()
         {
-            IsDataLoaded = false;
-            _dashboardViewModel = null;
             _prefetchViewModel = null;
             ClearFrameworkViewModels();
 
@@ -179,9 +121,6 @@ namespace Vortex.UI.ViewModels
             {
                 case "Welcome":
                     NavigateToWelcome();
-                    break;
-                case "Dashboard":
-                    NavigateToDashboard();
                     break;
                 case "Prefetch":
                     NavigateToPrefetchAnalyzer();

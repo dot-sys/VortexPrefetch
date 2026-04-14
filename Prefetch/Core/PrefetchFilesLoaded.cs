@@ -13,30 +13,8 @@ namespace Prefetch
         {
             var results = new List<string>();
 
-            foreach (var propertyName in new[] { "Filenames", "Files", "LoadedModulePaths", "FilenameStrings" })
-            {
-                if (TryGetStringEnumerable(prefetch, propertyName, out var strings))
-                {
-                    results.AddRange(strings);
-                }
-            }
-
-            if (TryGetEnumerable(prefetch, "FileMetrics", out var metrics))
-            {
-                foreach (var metric in metrics)
-                {
-                    var path = TryGetString(metric, "Path")
-                               ?? TryGetString(metric, "Filename")
-                               ?? TryGetString(metric, "Name");
-
-                    if (string.IsNullOrWhiteSpace(path))
-                    {
-                        continue;
-                    }
-
-                    results.Add(path);
-                }
-            }
+            if (prefetch.FilenameStrings != null)
+                results.AddRange(prefetch.FilenameStrings);
 
             if (prefetch.VolumeInformation != null)
             {

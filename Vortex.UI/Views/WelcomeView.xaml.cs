@@ -98,7 +98,7 @@ namespace Vortex.UI.Views
                 StatusText.Text = GetResourceString("AnalyzingPrefetchFiles");
                 await FadeInStatusText();
 
-                var prefetchDir = @"C:\Windows\Prefetch";
+                var prefetchDir = Path.Combine(Environment.GetEnvironmentVariable("SystemRoot") ?? @"C:\Windows", "Prefetch");
                 if (!Directory.Exists(prefetchDir))
                 {
                     throw new DirectoryNotFoundException("Prefetch directory not found: " + prefetchDir);

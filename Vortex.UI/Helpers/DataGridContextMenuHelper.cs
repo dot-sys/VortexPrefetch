@@ -125,60 +125,16 @@ namespace Vortex.UI.Helpers
             }
         }
 
-        // Opens folder in existing explorer window
         private static void OpenFolderInExistingExplorer(string folderPath)
         {
             try
             {
-                Type shellType = Type.GetTypeFromProgID("Shell.Application");
-                dynamic shell = Activator.CreateInstance(shellType);
-
-                try
-                {
-                    var windows = shell.Windows();
-                    bool navigated = false;
-
-                    foreach (dynamic window in windows)
-                    {
-                        try
-                        {
-                            string windowName = window.Name;
-                            if (windowName != null && windowName.Contains("Explorer"))
-                            {
-                                window.Navigate(folderPath);
-
-                                int hwnd = window.HWND;
-                                SetForegroundWindow(new IntPtr(hwnd));
-
-                                navigated = true;
-                                break;
-                            }
-                        }
-                        catch
-                        {
-                            continue;
-                        }
-                    }
-
-                    if (!navigated)
-                    {
-                        Process.Start("explorer.exe", $"/e,\"{folderPath}\"");
-                    }
-                }
-                finally
-                {
-                    System.Runtime.InteropServices.Marshal.ReleaseComObject(shell);
-                }
+                Process.Start("explorer.exe", "/e,\"" + folderPath + "\"");
             }
             catch
             {
-                Process.Start("explorer.exe", $"/e,\"{folderPath}\"");
             }
         }
-
-        // Windows API for window focus
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-        private static extern bool SetForegroundWindow(IntPtr hWnd);
 
         // Extracts directory from file path
         private static string GetDirectoryPath(string path)
